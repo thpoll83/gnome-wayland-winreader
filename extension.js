@@ -23,8 +23,12 @@ const IFACE = `
 
 export default class WindowReporterExtension {
     enable() {
-        this._dbus = Gio.DBusExportedObject.wrapJSObject(IFACE, this);
-        this._dbus.export(Gio.DBus.session, '/org/polykybd/WindowReporter');
+        // Assign this._dbus only after a successful export: if export() ever
+        // throws, _dbus stays null so disable() is a clean no-op rather than
+        // calling unexport() on a half-exported object.
+        const dbus = Gio.DBusExportedObject.wrapJSObject(IFACE, this);
+        dbus.export(Gio.DBus.session, '/org/polykybd/WindowReporter');
+        this._dbus = dbus;
     }
 
     disable() {
