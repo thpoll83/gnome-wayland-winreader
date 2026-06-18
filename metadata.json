@@ -1,0 +1,7 @@
+{
+  "uuid": "window-reporter@polykybd.org",
+  "name": "PolyKybd Window Reporter",
+  "description": "Read-only D-Bus endpoint reporting the focused window (id, wm_class, title) for PolyKybd on Wayland. Exposes no window-modifying methods.",
+  "shell-version": ["45", "46", "47", "48", "49"],
+  "url": "https://github.com/thpoll83/gnome-wayland-winreader"
+}
