@@ -4,6 +4,10 @@ A minimal, **read-only** GNOME Shell extension that reports the currently focuse
 window over D-Bus, so [PolyKybdHost](https://github.com/thpoll83/PolyKybdHost) can
 track the active application on GNOME/**Wayland**.
 
+## AI-assisted development
+
+Since this repository was created in June 2026, its code is written with AI assistance, mainly with Claude Code. CI and AI review bots check each change, but AI-written code can contain mistakes that these checks do not find. Please report problems as GitHub issues.
+
 ## Why
 
 On GNOME/Wayland, Mutter does not expose the active window over X11/EWMH, so
